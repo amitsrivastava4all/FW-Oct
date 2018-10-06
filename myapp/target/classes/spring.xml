@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="prod" class="com.srivastava.apps.Producer" scope="prototype">
+<!-- <constructor-arg index="0" value="100"></constructor-arg>
+<constructor-arg index="1" value="200"></constructor-arg> -->
+<!-- <constructor-arg name="x" value="100"></constructor-arg>
+<constructor-arg name="y" value="200"></constructor-arg> -->
+<!-- <constructor-arg name="db"  ref="dbObject"></constructor-arg> -->
+<property name="message" value="Hello This is Message"></property>
+<property name="db" ref="dbObject"></property>
+</bean>
+<bean id="dbObject" class="com.srivastava.apps.DB">
+</bean>
+
+</beans>
