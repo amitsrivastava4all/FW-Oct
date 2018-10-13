@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="employeeBeanObject" class="com.srivastava.basics.Employee" scope="prototype" >
+<property name="id" value="1001"/>
+<property name="name" value="Amit"/> 
+<property name="address"  >
+    <list>
+        <ref bean="officeAddressObject"/>
+        <ref bean="residenceAddressObject"/>
+    </list>
+</property>
+<property name="addressMap">
+<map>
+<entry key="office" value-ref="officeAddressObject"></entry>
+<entry key="res" value-ref="residenceAddressObject"></entry>
+</map>
+
+</property>
+<property name="addressSet">
+<set>
+ <ref bean="officeAddressObject"/>
+        <ref bean="residenceAddressObject"/>
+</set>
+
+</property>
+</bean>
+<bean id="officeAddressObject" class="com.srivastava.basics.Address" scope="prototype">
+    <property name="city" value="Delhi"/>
+    <property name="state" value="Delhi"/>
+    <property name="zipCode" value="110007"/>
+</bean>
+<bean id="residenceAddressObject" class="com.srivastava.basics.Address">
+    <property name="city" value="Mumbai"/>
+    <property name="state" value="Mumbai"/>
+    <property name="zipCode" value="220102"/>
+</bean>
+
+
+</beans>
