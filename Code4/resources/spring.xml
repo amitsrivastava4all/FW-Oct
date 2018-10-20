@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="parentemployeeBeanObject" class="com.srivastava.basics.Employee" scope="singleton" lazy-init="true" >
+<property name="id" value="1001"/>
+
+<property name="address" ref="addressObject"  />
+</bean>
+<bean id="childEmployeeBeanObject" class="com.srivastava.basics.Employee" parent="parentemployeeBeanObject">
+<property name="name" value="Amit"/> 
+</bean>
+
+<bean id="addressObject" class="com.srivastava.basics.Address">
+    <property name="city" value="Delhi"/>
+    <property name="state" value="Delhi"/>
+    <property name="zipCode" value="110007"/>
+</bean>
+</beans>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="employeeBeanObject" class="com.srivastava.basics.Employee" scope="prototype" lazy-init="true" name="empObject" >
+<property name="id" value="3"/>
+<property name="name" value="Amit"/> 
+<!-- Aggegration -->
+  <!-- <property name="address" ref="addressObject"/>  --> 
+      <!-- composition -->
+       <!--  <property name="address">
+			<bean  class="com.srivastava.basics.Address">
+    <property name="city" value="Delhi"/>
+    <property name="state" value="Delhi"/>
+    <property name="zipCode" value="110007"/>
+			</bean> 
+          
+       </property>  -->
+   
+<!-- </property>  -->   
+</bean>
+
+   <bean id="addressObject" class="com.srivastava.basics.Address">
+    <property name="city" value="Delhi"/>
+    <property name="state" value="Delhi"/>
+    <property name="zipCode" value="110007"/>
+</bean>  
+<bean id="addressObject2" class="com.srivastava.basics.Address">
+    <property name="city" value="Delhi7"/>
+    <property name="state" value="Delhi7"/>
+    <property name="zipCode" value="110007"/>
+</bean>  
+<bean id="addressObject3" class="com.srivastava.basics.Address">
+    <property name="city" value="Delhi6"/>
+    <property name="state" value="Delhi6"/>
+    <property name="zipCode" value="110006"/>
+</bean>  
+
+<!-- <alias name="empObject" alias="emp-alias"/> -->
+
+
+</beans>
