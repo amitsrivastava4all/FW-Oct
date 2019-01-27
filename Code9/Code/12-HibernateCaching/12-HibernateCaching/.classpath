@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate-libs"/>
+	<classpathentry kind="lib" path="/01-JDBC/src/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="lib" path="/Users/amit/Documents/MyMaterial/AllCodes/HibernateWS/hibernate-release-4.3.7.Final/hibernate-release-4.3.7.Final/lib/optional/ehcache/ehcache-core-2.4.3.jar"/>
+	<classpathentry kind="lib" path="/Users/amit/Documents/MyMaterial/AllCodes/HibernateWS/hibernate-release-4.3.7.Final/hibernate-release-4.3.7.Final/lib/optional/ehcache/hibernate-ehcache-4.3.7.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/amit/Documents/MyMaterial/AllCodes/HibernateWS/hibernate-release-4.3.7.Final/hibernate-release-4.3.7.Final/lib/optional/ehcache/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
